@@ -1,0 +1,23 @@
+$light:                           #fff;
+$stable:                          #f8f8f8;
+$positive:                        #387ef5;
+$calm:                            #11c1f3;
+$balanced:                        #33cd5f;
+$energized:                       #ffc900;
+$assertive:                       #ef473a;
+$royal:                           #886aea;
+$dark:                            #444;
+
+$stable: darken($dark, 5%);
+
+$base-background-color: #222;
+$toggle-off-bg-color: $stable;
+$modal-bg-color: $stable;
+$input-label-color: $light;
+$input-color: $light;
+
+@import 'bower_components/ionic/scss/ionic';
+
+.bar.bar-dark {
+  background-color: $stable;
+}

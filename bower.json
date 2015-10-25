@@ -1,0 +1,35 @@
+{
+  "name": "homemade_pi",
+  "version": "0.0.0",
+  "authors": [
+    "Nick Gal <nickgal@me.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "ionic": "~1.1.0",
+    "restangular": "~1.5.1",
+    "ngInflection": "~1.1.10",
+    "angularpoller": "angular-poller#~0.3.3"
+  },
+  "overrides": {
+    "ionic": {
+      "main": [
+        "release/fonts/*",
+        "release/js/ionic.js",
+        "release/js/ionic-angular.js"
+      ]
+    }
+  }
+}

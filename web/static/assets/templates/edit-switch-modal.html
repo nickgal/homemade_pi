@@ -1,0 +1,29 @@
+<ion-modal-view>
+  <ion-header-bar class="bar-dark">
+    <h1 class="title">Edit Switch</h1>
+    <div class="buttons">
+      <button class="button" ng-click="updateSwitch(edit_switch)">Save</button>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-input item-dark">
+        <span class="input-label">Name</span>
+        <input type="text" ng-model="edit_switch.name">
+      </ion-item>
+      <ion-item class="item-input item-dark">
+        <span class="input-label">RFCode - on</span>
+        <input type="text" ng-model="edit_switch.rf_code_on">
+      </ion-item>
+      <ion-item class="item-input item-dark">
+        <span class="input-label">RFCode - off</span>
+        <input type="text" ng-model="edit_switch.rf_code_off">
+      </ion-item>
+      <ion-item class="item-input item-dark">
+        <span class="input-label">IFTTT id</span>
+        <input type="text" ng-model="edit_switch.ifttt_id">
+        <!-- https://ifttt.com/myrecipes/personal/29318149 -->
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-modal-view>
