@@ -2,7 +2,7 @@ import {Socket} from "deps/phoenix/web/static/js/phoenix";
 
 angular.module('controllers', [])
 
-.controller('DashCtrl', function($scope, Restangular, poller, $ionicModal, $filter) {
+.controller('DashCtrl', ['$scope', 'Restangular', 'poller', '$ionicModal', '$filter', function($scope, Restangular, poller, $ionicModal, $filter) {
   $scope.switches = Restangular.all('switches').getList().$object;
 
   var socket = new Socket("/socket");
@@ -52,4 +52,4 @@ angular.module('controllers', [])
     switchItem.save();
     $scope.switch_modal.hide();
   };
-});
+}]);

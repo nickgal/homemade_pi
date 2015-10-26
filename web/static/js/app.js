@@ -36,7 +36,7 @@ angular.module('HomemadePi',
   ]
 )
 
-.run(function($ionicPlatform, Restangular, $filter) {
+.run(['$ionicPlatform', 'Restangular', '$filter', function($ionicPlatform, Restangular, $filter) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -70,9 +70,9 @@ angular.module('HomemadePi',
   });
 
 
-})
+}])
 
-.config(function($stateProvider, $urlRouterProvider) {
+.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
 
   // Ionic uses AngularUI Router which uses the concept of states
   // Learn more here: https://github.com/angular-ui/ui-router
@@ -102,4 +102,4 @@ angular.module('HomemadePi',
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/tab/dash');
 
-});
+}]);
