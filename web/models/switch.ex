@@ -34,7 +34,7 @@ defmodule HomemadePi.Switch do
       # only for say usage:
       action = if state, do: "on", else: "off"
       code_field = String.to_existing_atom("rf_code_#{action}")
-      code = changeset |> get_field code_field
+      code = changeset |> get_field(code_field) |> Integer.to_string
 
       Task.async fn ->
         if Mix.env == :prod do
