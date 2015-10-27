@@ -7,21 +7,25 @@
   </ion-header-bar>
   <ion-content>
     <ion-list>
+      <!-- <ion-item class="item-input item-dark">
+        <span class="input-label">Id</span>
+        <input type="text" ng-model="edit_switch.id" disabled />
+      </ion-item> -->
       <ion-item class="item-input item-dark">
         <span class="input-label">Name</span>
-        <input type="text" ng-model="edit_switch.name">
+        <input type="text" ng-model="edit_switch.name" />
       </ion-item>
       <ion-item class="item-input item-dark">
-        <span class="input-label">RFCode - on</span>
-        <input type="text" ng-model="edit_switch.rf_code_on">
+        <span class="input-label">On Code</span>
+        <input type="text" ng-model="edit_switch.rf_code_on" />
       </ion-item>
       <ion-item class="item-input item-dark">
-        <span class="input-label">RFCode - off</span>
-        <input type="text" ng-model="edit_switch.rf_code_off">
+        <span class="input-label">Off Code</span>
+        <input type="text" ng-model="edit_switch.rf_code_off" />
       </ion-item>
       <ion-item class="item-input item-dark">
         <span class="input-label">IFTTT id</span>
-        <input type="text" ng-model="edit_switch.ifttt_id">
+        <input type="text" ng-model="edit_switch.ifttt_id" />
         <!-- https://ifttt.com/myrecipes/personal/29318149 -->
       </ion-item>
     </ion-list>

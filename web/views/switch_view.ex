@@ -12,6 +12,9 @@ defmodule HomemadePi.SwitchView do
   def render("switch.json", %{switch: switch}) do
     %{id: switch.id,
       name: switch.name,
-      state: switch.state}
+      state: switch.state,
+      rf_code_on: switch.rf_code_on,
+      rf_code_off: switch.rf_code_off,
+      ifttt_id: switch.ifttt_id}
   end
 end
