@@ -5,10 +5,10 @@ angular.module('controllers', [])
 .controller('DashCtrl', ['$scope', 'Restangular', 'poller', '$ionicModal', '$filter', function($scope, Restangular, poller, $ionicModal, $filter) {
   $scope.switches = Restangular.all('switches').getList().$object;
 
-  var socket = new Socket("/socket");
-  socket.connect();
-  var channel = socket.channel("switches:lobby", {});
-  channel.join().receive("ok", function(dt) {
+  $scope.socket = new Socket("/socket");
+  $scope.socket.connect();
+  $scope.channel = $scope.socket.channel("switches:lobby", {});
+  $scope.channel.join().receive("ok", function(dt) {
     // wait for magic
   }).receive("error", function(dt) {
     // fallback to polling
@@ -20,7 +20,7 @@ angular.module('controllers', [])
     // });
   });
 
-  channel.on("update", function(dt) {
+  $scope.channel.on("update", function(dt) {
     var switchItem = $filter('filter')($scope.switches, {id: dt.id})[0];
     $scope.$apply(function(){
       _.extend(switchItem,dt);
