@@ -1,10 +1,15 @@
 <ion-view view-title="Dashboard">
   <ion-content>
     <ion-list>
+      <ion-item class="item-dark">
+        Channel Status: {{channel.state}}
+      </ion-item>
       <ion-toggle ng-repeat="switch in switches" ng-model="switch.state" ng-change="updateSwitch(switch)" class="item-dark" toggle-class="toggle-calm">
         <a ng-click="editSwitch(switch)" on-double-tap="editSwitch(switch)" style="width: 100%; display: block;" class="enable-pointer-events">
           <h2 class="light">{{switch.name}}</h2>
-          <p>Nine Inch Nails</p>
+          <p ng-show="switch.ifttt_id">
+            ifttt:{{switch.ifttt_id}}
+          </p>
         </a>
       </ion-toggle>
     </ion-list>
